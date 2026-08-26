@@ -4,73 +4,51 @@
     <meta charset="UTF-8">
     <title>Propuesta Secretaría de Turismo | CampusLA & Escuela Andina</title>
     <style>
-        :root { --bg: #0a0a0a; --gold: #c5a059; --text: #e2e8f0; --accent: #38bdf8; }
-        body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', sans-serif; padding: 2rem; 
+        :root { --bg: #f8fafc; --gold: #b48e3a; --text: #1e293b; --accent: #0284c7; --card-bg: #ffffff; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahoma, sans-serif; padding: 
 
-line-height: 1.6; }
-        .container { max-width: 1000px; margin: auto; }
+2rem; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; }
         
-        /* Header Section */
         .profile-header { border-bottom: 2px solid var(--gold); padding-bottom: 2rem; margin-bottom: 2rem; text-
 
 align: center; }
-        .profile-header h1 { color: var(--gold); font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .profile-header h1 { color: #0f172a; font-size: 1.6rem; margin-bottom: 0.5rem; }
         .profile-header h2 { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .emblem { font-size: 0.9rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-
+        .emblem { font-size: 0.8rem; letter-spacing: 1px; color: var(--gold); text-transform: uppercase; margin-
 
-bottom: 1.5rem; font-weight: bold; }
-        
-        /* Stats Grid */
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
-        .stat-card { background: #171717; padding: 1rem; border-radius: 8px; text-align: center; border: 1px solid 
+bottom: 1rem; font-weight: bold; }
 
-#333; }
-        .stat-card span { display: block; font-size: 1.2rem; color: var(--gold); font-weight: bold; }
+        .platform-access-box { background: #f0f9ff; border: 1px solid var(--accent); padding: 1.5rem; border-
 
-        /* Platform Access Callout */
-        .platform-access-box { background: rgba(56, 189, 248, 0.05); border: 1px solid var(--accent); padding: 
+radius: 10px; text-align: center; margin: 1.5rem 0; }
+        .platform-access-box a { color: var(--accent); font-weight: bold; text-decoration: none; }
 
-1.5rem; border-radius: 10px; text-align: center; margin: 1.5rem 0; }
-        .platform-access-box a { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.1rem; 
-
-}
-        .platform-access-box a:hover { text-decoration: underline; }
-
-        /* PDF Button */
         .pdf-btn-container { text-align: center; margin: 2rem 0; }
-        .btn-download { background: var(--gold); color: #000; font-weight: bold; padding: 0.8rem 2rem; border: 
+        .btn-download { background: var(--gold); color: #fff; font-weight: bold; padding: 0.8rem 2rem; border: 
 
-none; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.3s; text-decoration: none; display: 
+none; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.3s; }
+        .btn-download:hover { background: #92722e; }
 
-inline-block; }
-        .btn-download:hover { background: #d4af37; transform: scale(1.05); }
+        .card { background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-
 
-        /* Cards & Content */
-        .card { background: #111; padding: 2rem; border-radius: 12px; border: 1px solid #222; margin-bottom: 
-
-1.5rem; }
-        h3 { color: var(--accent); margin-bottom: 1rem; border-bottom: 1px solid #222; padding-bottom: 0.5rem; }
+bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h3 { color: var(--accent); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem; }
         ul { padding-left: 1.2rem; }
         li { margin-bottom: 0.6rem; font-size: 0.95rem; }
         
-        /* Budget Table */
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #121212; border-radius: 8px; 
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+        th, td { padding: 1rem; text-align: left; border: 1px solid #e2e8f0; vertical-align: middle; }
+        th { background: #f8fafc; color: var(--gold); text-align: center; }
+        td.price { text-align: right; font-weight: bold; }
+        td.center { text-align: center; }
 
-overflow: hidden; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #222; font-size: 0.95rem; }
-        th { background: #1a1a1a; color: var(--gold); }
-        td.price { text-align: right; color: var(--accent); font-weight: bold; }
-
-        /* Signature Section */
-        .signature-box { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--gold); text-align: 
-
-left; }
+        .signature-box { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--gold); }
 
         @media print {
-            body { background: #fff; color: #000; padding: 0; }
-            .card, .stat-card, .platform-access-box { background: #fff; border: 1px solid #ccc; color: #000; }
-            h1, h2, h3, th { color: #000 !important; }
+            body { background: #fff; }
             .btn-download, #redes-sociales { display: none; }
+            .card { border: 1px solid #ccc; box-shadow: none; }
         }
     </style>
 </head>
@@ -78,221 +56,237 @@ left; }
 
 <div class="container">
     <section class="profile-header">
-        <h1>PROGRAMA DE BILINGÜISMO Y TRANSFORMACIÓN DIGITAL TURÍSTICA</h1>
-        <h2>Secretaría de Turismo de Boyacá | Alianza Estratégica CampusLA & Escuela Andina</h2>
-        <div class="emblem">EDUCATIONAL SOFTWARE AND GLOBAL CERTIFICATION HUB</div>
-        <p><strong>Presupuesto Global:</strong> $26.969.900 COP | Cobertura Departamental bajo Estándares 
+        <h1>PROGRAMA DE FORMACIÓN TURÍSTICA</h1>
+        <h2>Gobernación de Boyacá / Secretaría de Turismo | Alianza Estratégica CampusLA</h2>
+        <div class="emblem">EDUCATIONAL SOFTWARE AND GLOBAL CERTIFICATION HUB — Dirigido a: Ing. Carlos Andrés 
 
-Globales</p>
+Amaya Rodríguez (Gobernador de Boyacá)</div>
         
-        <!-- Acceso Directo a la Plataforma (Arriba por vocacidad y lectura) -->
         <div class="platform-access-box">
-            <p style="margin-bottom: 0.3rem; font-size: 0.9rem; color: #cbd5e1;">Acceso Inmediato a Entornos de 
+            <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank">🌐 Conoce nuestra 
 
-Entrenamiento y Validación:</p>
-            <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank">🌐 Pincha para conocer 
+plataforma, Hub Oficial & Track Record de CampusLA</a>
+        </div>
 
-nuestra plataforma y Hub Oficial & Track Record experiencia de CampusLA</a>
+        <div class="consortium-info" style="margin-top: 20px; text-align: left; font-size: 0.95rem; line-height: 
+
+1.6;">
+            <p><strong>Consorcio Operativo de Ejecución y Apoyo</strong></p>
+            <p><strong>CampusLA:</strong> Ecosistema Global de Ejecución de Tecnología en Educación (NIT: 
+
+901705358)</p>
+            
+            <p style="margin-top: 15px;"><strong>Instituciones del ecosistema CLA:</strong></p>
+            <ul>
+                <li><strong>Escuela Andina</strong> (NIT: 901488039-1 | Resolución No. 210 del 4 de marzo de 2020 - 
+
+Secretaría de Educación de Duitama)</li>
+                <li><strong>INSCAP S.A.S.</strong> (NIT: 830095397-7)</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Instituciones certificadoras internacionales pertenecientes al 
+
+ecosistema CampusLA:</strong></p>
+            <ul>
+                <li>TOEFL ITP</li>
+                <li>TOEIC</li>
+                <li>English Discoveries</li>
+                <li>Oxford OTE (Oxford University Press)</li>
+                <li>Pearson</li>
+                <li>Trinity College of London</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Operación y Certificación:</strong></p>
+            <ul>
+                <li><strong>Ejecuta:</strong> CampusLA</li>
+                <li><strong>Certifica:</strong> Escuela Andina - INSCAP (Unidad Turismo y desarrollo)</li>
+            </ul>
         </div>
 
         <div class="pdf-btn-container">
             <button class="btn-download" onclick="window.print()">📥 Descargar / Imprimir Propuesta en PDF</button>
         </div>
-
-        <div class="stats-grid">
-            <div class="stat-card"><span>15 Años</span>Experiencia</div>
-            <div class="stat-card"><span>30K+</span>Estudiantes</div>
-            <div class="stat-card"><span>134</span>Municipios</div>
-            <div class="stat-card"><span>5.000+</span>Certificados</div>
-        </div>
     </section>
 
-    <!-- Pitch Tecnológico -->
+    <!-- INTRODUCCIÓN -->
     <div class="card">
-        <h3>CampusLA (Ecosistema Tech & Global Standards)</h3>
-        <p>CampusLA es un Hub de certificación y Homologación Global en el sector de EDTECH que trabaja de la mano 
+        <h3>1. Introducción y Justificación</h3>
+        <p>El departamento de Boyacá cuenta con un potencial turístico incalculable que exige prestadores y guías 
 
-con las 7 principales universidades del planeta Hardvard - Stanfort - Oxford - Trinity - Boston - Pearson ,Operamos 
+altamente cualificados. La presente propuesta técnica y económica detalla el programa de formación orientado a 
 
-como el puente definitivo entre la tecnología de punta y el bilingüismo de élite en Colombia. ; CampusLA, somos un 
+potenciar la interpretación del patrimonio natural, cultural y geológico, integrando metodologías modernas y 
 
-ecosistema de desarrollo Full-Stack, automatización con Inteligencia Artificial (LLMs y Agentes conversacionales) y 
-
-arquitectura LMS avanzada, respaldado por la representación y el aval directo de las casas certificadoras y 
-
-examinadoras más exigentes del planeta (ETS para TOEFL/GRE, Cambridge Assessment English, Trinity College London, 
-
-Pearson, iTEP y Oxford Global English Proficiency). Conectamos la innovación digital de alto nivel con estándares 
-
-internacionales comprobados para transformar competitivamente los territorios.</p>
+cobertura departamental.</p>
     </div>
 
-    <!-- Metodología -->
+    <!-- OBJETIVOS -->
     <div class="card">
-        <h3>Metodología de Alto Rendimiento: No son clases, es Alto Entrenamiento Conductual</h3>
+        <h3>2. Objetivos del Programa</h3>
         <ul>
-            <li><strong>Inmersión Práctica y Situacional:</strong> Simulaciones de escenarios reales del sector 
+            <li><strong>Objetivo General:</strong> Capacitar y certificar a los guías de turismo del departamento 
 
-turístico (atención hotelera, resolución de conflictos, gastronomía y guianza bilingüe) mediante el uso de nuestra 
+de Boyacá bajo estrictos estándares de calidad en interpretación patrimonial.</li>
+            <li><strong>Objetivos Específicos:</strong>
+                <ul>
+                    <li>Dotar a los participantes de herramientas pedagógicas, metodológicas y técnicas 
 
-plataforma y entornos de IA conversacional.</li>
-            <li><strong>Ingeniería del Aprendizaje Autónomo ("Aprender a Aprender"):</strong> Más allá de enseñar 
+actualizadas.</li>
+                    <li>Desarrollar 30 horas de formación bajo una <strong>modalidad híbrida (virtual y 
 
-vocabulario, entrenamos a los prestadores de servicios turísticos en la <strong>mecánica mental y conductual para 
+presencial)</strong> óptima para la apropiación práctica.</li>
+                    <li>Fomentar la competitividad regional mediante la expedición de certificaciones oficiales 
 
-dominar el idioma</strong>, estructurando hábitos lingüísticos diarios que les permiten continuar perfeccionando su 
-
-nivel de manera independiente, orgánica y permanente una vez finalizado el programa.</li>
-            <li><strong>Apropiación de Largo Plazo:</strong> El proceso deja una capacidad instalada en los 
-
-empresarios y trabajadores de la región, transformando su comportamiento comunicativo frente al visitante 
-
-extranjero y elevando el estándar de competitividad de todo el departamento de Boyacá.</li>
+avaladas.</li>
+                </ul>
+            </li>
         </ul>
     </div>
 
-    <!-- Las 3 Etapas -->
+    <!-- MODALIDAD HÍBRIDA -->
     <div class="card">
-        <h3>El Plan de Certificación en 3 Etapas (Ruta de Competencias Turísticas)</h3>
+        <h3>3. Modalidad y Metodología (30 Horas Híbridas)</h3>
+        <p>El programa se desarrolla bajo un esquema <strong>híbrido</strong> con una intensidad horaria total de 
+
+<strong>30 horas</strong>, combinando:</p>
         <ul>
-            <li><strong>Etapa 1 (Al Iniciar):</strong> Prueba de suficiencia diagnóstica y nivelación alineada al 
+            <li><strong>Componente Virtual:</strong> Acompañamiento a través de nuestra plataforma LMS y contenidos 
 
-Marco Común Europeo de Referencia (MCER) en Nivel A2. Primera certificación parcial. <em>(Nota: Si algún prestador 
+interactivos en línea.</li>
+            <li><strong>Componente Presencial / Práctica de Campo:</strong> Jornadas prácticas orientadas a la 
 
-ya cuenta con nivel B1 o B2 avanzado al arrancar, puede solicitar la validación y el salto directo de 
-
-fase).</em></li>
-            <li><strong>Etapa 2 (Mes Siguiente):</strong> Profundización y certificación en Nivel B1 (Intermedio 
-
-Alto), enfocado en atención al turista extranjero y bilingüismo aplicado.</li>
-            <li><strong>Etapa 3 (Mes Cierre / Avanzado):</strong> Culminación en Nivel B2 (Avanzado), integrando 
-
-gestión turística internacional y marketing digital con IA.</li>
+aplicación directa de los conocimientos sobre el terreno en los atractivos turísticos de Boyacá.</li>
         </ul>
-        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gold);"><strong>Respaldo Legal:</strong> 
-
-Emisión de certificaciones bajo la <strong>Resolución 210 de 2020</strong> por parte de la Escuela Andina, 
-
-respaldado por el aval académico de CampusLA en 134 municipios.</p>
     </div>
 
-    <!-- Presupuesto y Forma de Pago -->
+    <!-- TABLA DE ACTIVIDADES Y PRESUPUESTO -->
     <div class="card">
-        <h3>Distribución del Presupuesto Global ($26.969.900 COP) & Forma de Pago</h3>
-        <table>
-            <tr>
-                <th>Componente Estratégico</th>
-                <th style="text-align: right;">Valor Asignado</th>
-            </tr>
-            <tr>
-                <td>1. Honorarios Docentes y Expertos (Etapas 1, 2 y 3)</td>
-                <td class="price">$5.000.000 COP</td>
-            </tr>
-            <tr>
-                <td>2. Consumo de Infraestructura de Inteligencia Artificial (LLM & Agentes IA)</td>
-                <td class="price">$5.000.000 COP</td>
-            </tr>
-            <tr>
-                <td>3. Acceso a Entornos Moodle & Plataforma de Entrenamiento</td>
-                <td class="price">$7.000.000 COP</td>
-            </tr>
-            <tr>
-                <td>4. Costo de Emisión de Certificados Institucionales (Escuela Andina / CampusLA)</td>
-                <td class="price">$4.000.000 COP</td>
-            </tr>
-            <tr>
-                <td>5. Otros Costos Operativos, Logística y Soporte Tecnológico</td>
-                <td class="price">$5.969.900 COP</td>
-            </tr>
-            <tr>
-                <td><strong>TOTAL INVERSIÓN</strong></td>
-                <td class="price" style="color: var(--gold);">$25.000.000 COP</td>
-            </tr>
-        </table>
+        <h3>4. Presupuesto y Actividades del Diplomado</h3>
+        <p>Diplomado en Interpretación del Patrimonio Natural, Cultural y Geológico para Guías de Turismo del 
+
+departamento de Boyacá.</p>
         
-        <div style="margin-top: 1.5rem; background: #171717; padding: 1.2rem; border-radius: 8px; border: 1px solid 
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">ÍTEM</th>
+                    <th style="width: 15%;">TIPO</th>
+                    <th style="width: 45%;">DESCRIPCIÓN DE LA ACTIVIDAD</th>
+                    <th style="width: 20%;">VALOR</th>
+                    <th style="width: 10%;">CANTIDAD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center"><strong>1.1</strong></td>
+                    <td class="center">SERVICIO</td>
+                    <td>Elaboración del diseño curricular y metodológico del programa de formación en 
 
-#333;">
-            <p style="color: var(--gold); font-weight: bold; margin-bottom: 0.5rem;">Esquema de Pago Flexible 
+interpretación del patrimonio natural, cultural y geológico dirigido a guías de turismo del departamento de 
 
-(Adaptable a la Secretaría):</p>
-            <p style="font-size: 0.95rem;">• <strong>50% ($12.500.000 COP)</strong> al inicio y acta de inicio del 
+Boyacá.</td>
+                    <td class="price">$ 2.100.000,00</td>
+                    <td class="center">1</td>
+                </tr>
+                <tr>
+                    <td class="center"><strong>1.2</strong></td>
+                    <td class="center">SERVICIO</td>
+                    <td>Desarrollo de jornadas de formación en interpretación del patrimonio natural, cultural y 
 
-programa.<br>• <strong>50% ($13.969.900 COP)</strong> al tercer mes o contra entrega y satisfacción de la fase 
+geológico para guías de turismo del departamento de Boyacá.</td>
+                    <td class="price">$ 17.000.000,00</td>
+                    <td class="center">14</td>
+                </tr>
+                <tr>
+                    <td class="center"><strong>1.3</strong></td>
+                    <td class="center">SERVICIO</td>
+                    <td>Desarrollo de una práctica de campo orientada a la aplicación de los conocimientos 
 
-final, según convenga al flujo de caja y disponibilidad presupuestal de la Secretaría.</p>
-        </div>
+adquiridos en el programa de interpretación del patrimonio (Refrigerios y/o almuerzo).</td>
+                    <td class="price">$ 1.800.000,00</td>
+                    <td class="center">1</td>
+                </tr>
+                <tr>
+                    <td class="center"><strong>1.4</strong></td>
+                    <td class="center">SERVICIO</td>
+                    <td>Suministro de material pedagógico y de apoyo para los participantes del programa de 
+
+interpretación del patrimonio.</td>
+                    <td class="price">$ 2.600.000,00</td>
+                    <td class="center">30</td>
+                </tr>
+                <tr>
+                    <td class="center"><strong>1.5</strong></td>
+                    <td class="center">SERVICIO</td>
+                    <td>Aplicación de evaluaciones y expedición de certificados de participación a los guías de 
+
+turismo que cumplan con los requisitos del programa.</td>
+                    <td class="price">$ 1.700.000,00</td>
+                    <td class="center">1</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right; font-weight: bold;">TOTAL INVERSIÓN:</td>
+                    <td class="price" style="color: var(--gold); font-size: 1.1rem;">$ 25.200.000,00</td>
+                    <td class="center">-</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <!-- Membresía de Élite & Exámenes Internacionales -->
+    <!-- CONCLUSIONES -->
     <div class="card">
-        <h3>Membresía Global de Élite & Estrategia de Exámenes Internacionales</h3>
-        <p><strong>Reconocimiento Internacional de los Participantes:</strong> Todos los egresados del programa 
+        <h3>5. Conclusiones e Impacto Esperado</h3>
+        <p>La ejecución de este diplomado garantiza la consolidación de un capital humano altamente capacitado, 
 
-serán certificados oficialmente como <strong>Miembros de Élite del Ecosistema CampusLA</strong>, integrándolos 
+elevando los estándares de calidad del servicio turístico en Boyacá, dinamizando la economía local y posicionando 
 
-formalmente en nuestra red global de organizaciones aliadas y posicionándolos como referentes estratégicos de la 
-
-zona ante el mercado internacional.</p>
-        <p style="margin-top: 1rem;"><strong>Blindaje del Presupuesto (Exámenes Globales):</strong> Dentro de los 
-
-$25 millones se entrega la titulación oficial (Res. 210 / Escuela Andina). Para los exámenes internacionales de las 
-
-<em>"Big Five" + Trinity (TOEFL, Cambridge, Trinity, Pearson, iTEP, Oxford)</em>, CampusLA otorga <strong>vouchers 
-
-con tarifa preferencial de convenio institucional</strong> para quienes deseen presentarlos de forma voluntaria, 
-
-garantizando cero sobrecostos para la Secretaría.</p>
-        <p style="margin-top: 1rem;"><strong>Respaldo Académico y Universidades Aliadas:</strong> Experiencia 
-
-masiva previa articulada con SENA, Cámara de Comercio, UNAD, UPTC, UMNG, Areandina, Universidad Nacional, 
-
-Universidad de los Andes y Javeriana.</p>
-
-        <!-- Firma Ejecutiva -->
+al departamento como un referente nacional en bilingüismo e interpretación patrimonial.</p>
+        
         <div class="signature-box">
-            <p style="font-weight: bold; color: var(--gold); font-size: 1.05rem;">Hollman Alvarez Salamanca</p>
+            <p style="font-weight: bold; color: var(--gold);">Hollman Alvarez Salamanca</p>
             <p style="font-size: 0.9rem; color: var(--accent);">Líder de Operaciones y Expansión Global</p>
-            <p style="font-size: 0.85rem; color: #94a3b8; font-style: italic; margin-top: 0.2rem;">CampusLA — 
+            <p style="font-size: 0.85rem; color: #64748b; font-style: italic;">CampusLA — Educational Software and 
 
-Educational Software and Global Certification Hub</p>
+Global Certification Hub</p>
         </div>
     </div>
 </div>
 
 <section id="redes-sociales" style="margin: 3rem auto; padding: 2rem; max-width: 800px; text-align: center; 
 
-border-top: 1px solid #333;">
-    <h3 style="color: #c5a059; margin-bottom: 1.5rem; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 
+border-top: 1px solid #e2e8f0;">
+    <h3 style="color: var(--gold); margin-bottom: 1.5rem; font-size: 1.2rem; text-transform: uppercase; letter-
 
-2px;">Canales Oficiales & Contacto</h3>
+spacing: 2px;">Canales Oficiales & Contacto</h3>
     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-        <a href="https://wa.me/573144365569" target="_blank" style="color: #cbd5e1; text-decoration: none; font-
+        <a href="https://wa.me/573144365569" target="_blank" style="color: #1e293b; text-decoration: none; font-
 
 size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #25D366; border-radius: 6px;">WhatsApp: 314 436 5569</a>
-        <a href="https://www.facebook.com/profile.php?id=100013260212952" target="_blank" style="color: #cbd5e1; 
+        <a href="https://www.facebook.com/profile.php?id=100013260212952" target="_blank" style="color: #1e293b; 
 
-text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #333; border-radius: 
+text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #cbd5e1; border-radius: 
 
 6px;">Facebook</a>
-        <a href="https://www.instagram.com/confesionescampusuniversi/" target="_blank" style="color: #cbd5e1; 
+        <a href="https://www.instagram.com/confesionescampusuniversi/" target="_blank" style="color: #1e293b; 
 
-text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #333; border-radius: 
+text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #cbd5e1; border-radius: 
 
 6px;">Instagram</a>
-        <a href="https://www.tiktok.com/@aprendegratismarty?lang=es" target="_blank" style="color: #cbd5e1; text-
+        <a href="https://www.tiktok.com/@aprendegratismarty?lang=es" target="_blank" style="color: #1e293b; text-
 
-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #333; border-radius: 6px;">TikTok</a>
-        <a href="https://www.youtube.com/channel/UCvfCiF08p5G48Z5WTNOzeyQ" target="_blank" style="color: #cbd5e1; 
+decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #cbd5e1; border-radius: 
 
-text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #333; border-radius: 
+6px;">TikTok</a>
+        <a href="https://www.youtube.com/channel/UCvfCiF08p5G48Z5WTNOzeyQ" target="_blank" style="color: #1e293b; 
+
+text-decoration: none; font-size: 0.95rem; padding: 0.5rem 1rem; border: 1px solid #cbd5e1; border-radius: 
 
 6px;">YouTube</a>
     </div>
     <p style="color: #64748b; font-size: 0.85rem;">
-        Plataforma oficial: <a href="http://www.campuslatinoamerica.edu.co" style="color: #c5a059; text-decoration: 
+        Plataforma oficial: <a href="http://www.campuslatinoamerica.edu.co" style="color: var(--gold); text-
 
-none;">www.campuslatinoamerica.edu.co</a>
+decoration: none;">www.campuslatinoamerica.edu.co</a>
     </p>
 </section>
 
